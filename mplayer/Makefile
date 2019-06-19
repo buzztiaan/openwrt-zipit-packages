@@ -42,7 +42,7 @@ CONFIGURE_ARGS := \
 		--as="$(TARGET_AS)" \
 		--charset=UTF-8 \
 		--extra-cflags="$(TARGET_CFLAGS)" \
-		--extra-ldflags="$(TARGET_LDFLAGS)" \
+		--extra-ldflags="-lsalsa $(TARGET_LDFLAGS)" \
 		--yasm='' \
 		--enable-mad \
 		--enable-tremor-internal \
