@@ -19,12 +19,13 @@ define Package/tig
 	SECTION:=devel
 	CATEGORY:=Development
 	TITLE:=Console Git repository viewer
-	DEPENDS:=+git +libncurses
+	DEPENDS:=+git +libncursesw
 	URL:=http://jonas.nitro.dk/tig/releases/
 endef
 
 define Package/tig/description
-	Command line launcher for search engines and other Internet services.
+	Tig is an ncurses-based text-mode interface for git.
+	It functions mainly as a Git repository browser, but can also assist in staging changes for commit at chunk level and act as a pager for output from various Git commands.
 endef
 
 define Build/Configure
