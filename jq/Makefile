@@ -14,26 +14,26 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/jq-$(PKG_VERSION)
 include $(INCLUDE_DIR)/package.mk
 
 define Package/jq
-        SECTION:=utils
-        CATEGORY:=Utilities
-        TITLE:=jq
+	SECTION:=utils
+	CATEGORY:=Utilities
+	TITLE:=jq
 #       DEPENDS:=
-        URL:=http://jq.org
+	URL:=http://jq.org
 endef
 
 define Package/jq/description
-        jq is a lightweight and flexible command-line JSON processor.
+	jq is a lightweight and flexible command-line JSON processor.
 endef
 
 define Build/Configure
-        $(call Build/Configure/Default, \
-                --prefix=/usr \
-        )
+	$(call Build/Configure/Default, \
+		--prefix=/usr \
+	)
 endef
 
 define Package/jq/install
-        $(INSTALL_DIR) $(1)/usr/bin/
-        $(INSTALL_BIN) $(PKG_BUILD_DIR)/jq $(1)/usr/bin/
+	$(INSTALL_DIR) $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/jq $(1)/usr/bin/
 endef
 
 $(eval $(call BuildPackage,jq))
