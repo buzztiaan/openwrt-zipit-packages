@@ -25,8 +25,8 @@ define Package/mplayer
   CATEGORY:=Multimedia
   TITLE:=MPlayer, the movie player
   URL:=http://www.mplayerhq.hu
-  DEPENDS:=+libjpeg +libpng +zlib +libfreetype +fontconfig $(ICONV_DEPENDS) +libmad +libaa +giflib +fribidi +libtheora +libggi
-  DEPENDS+=+alsa-lib +libfaad2 +libmpcdec +libmpg123 +libspeex +libpthread
+  DEPENDS:=+libjpeg +libpng +zlib +libfreetype +fontconfig $(ICONV_DEPENDS) +libmad +giflib +libtheora +libggi
+  DEPENDS+=+alsa-lib +libfaad2 +libmpcdec +libmpg123 +libspeex +libpthread +liblzo
 endef
 
 define Package/mplayer/description
